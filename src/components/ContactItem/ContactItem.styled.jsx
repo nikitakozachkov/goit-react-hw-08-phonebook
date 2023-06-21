@@ -10,7 +10,7 @@ export const Item = styled.li`
   border-radius: 4px;
 `
 
-export const Text = styled.text`
+export const Text = styled.p`
   display: inline-block;
 `
 export const Button = styled.button`
