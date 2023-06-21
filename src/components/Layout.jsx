@@ -9,7 +9,7 @@ export const Layout = () => {
     <>
       <Header />
 
-      <main style={{ padding: "24px 12px" }}>
+      <main style={{ padding: "18px 12px" }}>
         <Suspense
           fallback={
             <div
