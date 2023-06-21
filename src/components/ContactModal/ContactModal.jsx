@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Backdrop, Modal } from './ContactModal.styled';
 import { useEffect } from 'react';
@@ -15,6 +15,7 @@ export const ContactModal = ({ onClose }) => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
   const handleBackdropClick = event => {
@@ -35,4 +36,4 @@ export const ContactModal = ({ onClose }) => {
 
 ContactModal.propTypes = {
   onClose: PropTypes.func.isRequired,
-}
+};
