@@ -6,7 +6,7 @@ import { ContactModal } from 'components/ContactModal/ContactModal';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
 import { AiFillPlusCircle } from 'react-icons/ai';
-import { HeaderText, Button } from './Contacts.styled';
+import { Container, HeaderText, Button } from './Contacts.styled';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -33,18 +33,21 @@ export default function Contacts() {
 
   return (
     <>
-      {isModalOpen && <ContactModal onClose={toggleModal} />}
+      {isModalOpen && (
+        <ContactModal onClose={toggleModal} isModalOpen={isModalOpen} />
+      )}
 
-      <div
-        style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}
-      >
+      <Container>
         <HeaderText>Contacts</HeaderText>
+
         <Button onClick={toggleModal}>
-          <AiFillPlusCircle style={{ width: '22px', height: '22px' }} />
+          <AiFillPlusCircle />
         </Button>
-      </div>
+      </Container>
+
       <Filter />
       {isLoading && <p>Loading...</p>}
+
       {contacts.length !== 0 ? (
         <ContactList />
       ) : (
