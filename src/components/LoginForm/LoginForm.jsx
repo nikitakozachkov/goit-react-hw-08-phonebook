@@ -24,12 +24,14 @@ export const LoginForm = () => {
     <Container onSubmit={handleSubmit} autoComplete="off">
       <label>
         <Text>Email</Text>
-        <Input type="email" name="email" required />
+
+        <Input type="email" name="email" required minLength="6" maxLength="32" />
       </label>
 
       <label>
         <Text>Password</Text>
-        <Input type="password" name="password" required />
+
+        <Input type="password" name="password" required minLength="6" maxLength="32" />
       </label>
 
       <Button type="submit">Sign in</Button>

@@ -14,7 +14,7 @@ export const Container = styled.div`
     color: #ffffff;
   }
 
-  & a:first-child {
+  & a:first-of-type {
     margin-right: 24px;
   }
 `

@@ -5,12 +5,12 @@ import { refresh } from 'redux/auth/actions';
 import { getIsRefreshing } from 'redux/auth/selectors';
 import { RestricredRoute } from './RestricredRoute';
 import { PrivateRoute } from './PrivateRoute';
-import { Layout } from './Layout';
+import { Layout } from './Layout/Layout';
 
 const HomePage = lazy(() => import('pages/Home/Home'));
 const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
-const RegisterPage = lazy(() => import('pages/Register'));
-const LoginPage = lazy(() => import('pages/Login'));
+const RegisterPage = lazy(() => import('pages/Register/Register'));
+const LoginPage = lazy(() => import('pages/Login/Login'));
 const NotFoundPage = lazy(() => import('pages/NotFound/NotFound'));
 
 export const App = () => {

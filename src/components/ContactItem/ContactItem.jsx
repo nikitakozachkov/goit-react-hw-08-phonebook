@@ -18,6 +18,7 @@ export const ContactItem = ({ id, name, number }) => {
       <Text>
         Name: {name} <br /> Phone: {number}
       </Text>
+      
       <Button type="button" onClick={handleClick}>
         <AiFillDelete style={{ width: '18px', height: '18px' }} />
       </Button>

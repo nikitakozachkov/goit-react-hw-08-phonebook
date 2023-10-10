@@ -7,7 +7,14 @@ export const Container = styled.div`
   font-size: 14px;
 
   & p {
+    display: none;
     margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    & p {
+      display: block;
+    }
   }
 `
 

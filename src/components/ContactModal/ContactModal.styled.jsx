@@ -17,12 +17,13 @@ export const Modal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
+  width: calc(100% - 16px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8px;
-  width: 500px;
-  height: 250px;
+  padding: 16px;
   background-color: #ffffff;
 `

@@ -11,6 +11,7 @@ export const Header = () => {
   return (
     <Container>
       <Navigation />
+      
       {isLoggedIn ? <UserMenu /> : <AuthMenu />}
     </Container>
   );

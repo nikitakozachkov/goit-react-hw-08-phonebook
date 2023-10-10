@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { getContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/actions';
 import { toast } from 'react-hot-toast';
@@ -42,30 +42,35 @@ export const ContactForm = ({ onClose }) => {
     <Container onSubmit={onFormSubmit} autoComplete="off">
       <label>
         <Text>Name</Text>
+
         <Input
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          maxLength="16"
           required
         />
       </label>
 
       <label>
         <Text>Phone</Text>
+
         <Input
           type="tel"
           name="phone"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          maxLength="12"
           required
         />
       </label>
 
-      <ul style={{ listStyle: 'none', gap: '8px', display: 'flex' }}>
+      <ul>
         <li>
           <Button type="submit">Confirm</Button>
         </li>
+
         <li>
           <Button type="button" onClick={onClose}>
             Cancel
@@ -78,4 +83,4 @@ export const ContactForm = ({ onClose }) => {
 
 ContactForm.propTypes = {
   onClose: PropTypes.func.isRequired,
-}
+};

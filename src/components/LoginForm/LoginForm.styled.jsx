@@ -3,7 +3,14 @@ import styled from "@emotion/styled";
 export const Container = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
+  padding: 0 8px;
+
+  & label {
+    width: 100%;
+    max-width: 400px;
+  }
 `
 
 export const Text = styled.p`
@@ -13,7 +20,7 @@ export const Text = styled.p`
 `
 
 export const Input = styled.input`
-  width: 200px;
+  width: 100%;
   padding: 4px;
   outline: 0;
   border: 1px solid #2a2a2a;
@@ -23,7 +30,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
 margin-top: 4px;
-width: 100px;
+width: 120px;
 height: 28px;
 border: 0;
 border-radius: 4px;
